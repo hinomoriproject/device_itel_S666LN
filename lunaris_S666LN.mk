@@ -1,0 +1,23 @@
+#
+# Copyright (C) 2026 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# LineageOS product for the itel RS4. Everything ROM-independent -- and why each
+# line of it is there -- lives in product_common.mk.
+include device/itel/S666LN/product_common.mk
+
+# The Pixel 10 identity (identity_pixel10.mk), opt-in: the ROM recipes building this product
+# (LineageOS, Axion, crDroid) export S666LN_IDENTITY=pixel10; a plain lunch keeps itel's.
+ifeq ($(S666LN_IDENTITY),pixel10)
+include device/itel/S666LN/identity_pixel10.mk
+endif
+
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+PRODUCT_NAME := lunaris_S666LN
+
+# Maintainer (Settings > About phone > Who's to blame)
+PRODUCT_SYSTEM_PROPERTIES += ro.lunaris.maintainer=SUZUNAxAntigravity
