@@ -1,0 +1,32 @@
+diff --git a/Android.bp b/Android.bp
+index 4114569..2241ee8 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -151,27 +151,6 @@ cc_library_shared {
+     vendor_available: true,
+ }
+ 
+-cc_library_shared {
+-    name: "android.hardware.security.keymint-V1-ndk_platform",
+-    shared_libs: ["android.hardware.security.keymint-V1-ndk"],
+-    system_ext_specific: true,
+-    vendor_available: true,
+-}
+-
+-cc_library_shared {
+-    name: "android.hardware.security.secureclock-V1-ndk_platform",
+-    shared_libs: ["android.hardware.security.secureclock-V1-ndk"],
+-    system_ext_specific: true,
+-    vendor_available: true,
+-}
+-
+-cc_library_shared {
+-    name: "android.hardware.security.sharedsecret-V1-ndk_platform",
+-    shared_libs: ["android.hardware.security.sharedsecret-V1-ndk"],
+-    system_ext_specific: true,
+-    vendor_available: true,
+-}
+-
+ cc_library_shared {
+     name: "android.hardware.vibrator-V1-ndk_platform",
+     shared_libs: ["android.hardware.vibrator-V1-ndk"],

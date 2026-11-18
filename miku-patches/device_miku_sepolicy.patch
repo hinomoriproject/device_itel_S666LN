@@ -1,0 +1,20 @@
+diff --git a/common/public/te_macros b/common/public/te_macros
+index 2af4893..2d3f501 100644
+--- a/common/public/te_macros
++++ b/common/public/te_macros
+@@ -8,3 +8,15 @@ expandattribute hal_$1_client true;
+ attribute hal_$1_server;
+ expandattribute hal_$1_server false;
+ ')
++
++
++# --- added for Lineage-derived device policy (device/mediatek/sepolicy_vndr) ---
++define(`rw_dir_file', `
++allow $1 $2:dir r_dir_perms;
++allow $1 $2:{ file lnk_file } rw_file_perms;
++')
++
++define(`create_dir_file', `
++allow $1 $2:dir r_dir_perms;
++allow $1 $2:{ file lnk_file } create_file_perms;
++')

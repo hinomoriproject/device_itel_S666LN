@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="hinomori" fetch="https://github.com/hinomoriproject" />
+  <project path="device/itel/S666LN" name="device_itel_S666LN" remote="hinomori" revision="MikuUI" />
+</manifest>

@@ -1,0 +1,13 @@
+diff --git a/build/product/miku_product_common.mk b/build/product/miku_product_common.mk
+index 15fed81..10d63f6 100644
+--- a/build/product/miku_product_common.mk
++++ b/build/product/miku_product_common.mk
+@@ -19,7 +19,7 @@
+ $(call inherit-product-if-exists, vendor/extra/product.mk)
+ 
+ # Exclude repos from bp scanning
+-PRODUCT_SOURCE_ROOT_DIRS += -prebuilts/misc/protobuf_vendorcompat
++# PRODUCT_SOURCE_ROOT_DIRS += -prebuilts/misc/protobuf_vendorcompat
+ 
+ # Inherit from our versioning
+ $(call inherit-product, vendor/miku/config/versioning.mk)

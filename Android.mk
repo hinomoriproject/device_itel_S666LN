@@ -207,7 +207,7 @@ $(S666LN_VDEPS_STAMP): $(S666LN_VDEPS_TF) $(S666LN_VDEPS_SCRIPT)
 	$(hide) $(S666LN_VDEPS_SCRIPT) $(TARGET_OUT_VENDOR) $(TARGET_OUT)
 	$(hide) mkdir -p $(dir $@) && touch $@
 
-bacon: $(S666LN_VDEPS_STAMP)
+diva: $(S666LN_VDEPS_STAMP)
 
 # 🔴 And the RELEASE path, which is a DIFFERENT target and was not covered.
 #
